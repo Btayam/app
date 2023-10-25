@@ -14,7 +14,8 @@
     $foto=(isset($_FILES["foto"]['name'])?$_FILES["foto"]['name']:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
     $cv=(isset($_FILES["cv"]['name'])?$_FILES["cv"]['name']:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
 
-    $idpuesto=(isset($_POST["idpuesto"])?$_POST["idpuesto"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
+    $idpuesto = isset($_POST["idpuesto"]) ? intval($_POST["idpuesto"]) : 0; 
+    // $idpuesto=(isset($_POST["idpuesto"])?$_POST["idpuesto"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
     $fechadeingreso=(isset($_POST["fechadeingreso"])?$_POST["fechadeingreso"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
 
     //Preparar la inserccion de los datos

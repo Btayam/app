@@ -1,15 +1,17 @@
 <?php
-
-$servidor="DESKTOP-USP39LK"; //127.0.0.1
-$baseDeDatos="app";
-$usuario="Castillob";
-$contraseña="Bb1077091759*";
+$servername="DESKTOP-USP39LK"; //127.0.0.1
+$username="Castillob";
+$password="Bb1077091759*";
+$dbname="app";
 
 try{
-    $conexion= new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$contraseña);
+    //$conexion= new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$contraseña);
+    $conexion= new mysqli($servername, $username, $password, $dbname);
+    echo "Conexión exitosa.";
 }catch(Exception $ex){
     echo $ex->getMessage();
 }
+
 
 ?>
 
