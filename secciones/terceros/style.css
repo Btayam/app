@@ -1,0 +1,43 @@
+       /* Estilos para el banner */
+       .banner {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Estilos para la tabla */
+    .table-container {
+        overflow-x: auto;
+    }
+    .table {
+        max-width: 100%; /* Ancho máximo de la tabla */
+    }
+    .table th, .table td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 150px;
+    }
+    .table th:last-child, .table td:last-child {
+        width: 150px; /* Ancho fijo para la última columna */
+        white-space: normal; /* Permitir que el contenido se ajuste */
+    }
+    .table th:nth-child(-n+17), .table td:nth-child(-n+17) {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 2;
+    }
+    .acciones-th {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 2;
+    }
+    .acciones-td {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 2;
+    }

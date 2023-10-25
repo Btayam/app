@@ -1,0 +1,58 @@
+/* ********************************************************************************************************** */
+/* HEADER */
+/* Estilo para centrar el menú en la parte superior */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para el botón activo (resaltado en azul) */
+.nav-item.active .nav-link {
+    background-color: blue;
+    color: white;
+}
+
+/* Estilo para agregar sombra al botón al pasar el mouse */
+.nav-item .nav-link:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #007bff;
+}
+.banner {
+    background-color: #007bff; /* Color de fondo del banner */
+    color: #007bff; /* Color del texto del banner (azul) */
+    padding: 0,1px; /* Espaciado interior del banner (ajusta según tus necesidades) */
+    text-align: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* Ocupa todo el ancho de la página */
+}
+
+/* ********************************************************************************************************** */
+/* FOOTER */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% de la altura de la ventana */
+    position: relative;
+}
+/* Footer */
+/* ------ */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #007bff; /* Color de fondo del footer */
+    color: #fff; /* Color del texto del footer */
+    padding: 20px 0; /* Espaciado interior del footer */
+}
+/* Contenedor centrado en la parte inferior */
+/* ---------------------------------------- */
+.contenedorf {
+    background-color: #007bff; /* Color de fondo del contenedor */
+    color: #fff; /* Color del texto del contenedor */
+    padding: 20px; /* Espaciado interior del contenedor */
+    position: fixed; /* Fija el contenedor en la parte inferior */
+    bottom: 0; /* Lo coloca en la parte inferior de la ventana */
+    left: 0; /* Lo coloca al borde izquierdo */
+    right: 0; /* Lo coloca al borde derecho */
+    text-align: center; /* Centra el contenido horizontal y verticalmente */
+    background-position: center center; /* Centra el fondo del contenedor */
+}

@@ -1,0 +1,41 @@
+.banner {
+    background-color: #007bff; /* Color de fondo del banner */
+    color: #fff; /* Color del texto en el banner */
+    text-align: center; /* Alineación del texto en el centro */
+    padding: 20px; /* Espaciado interno del banner */
+}
+
+/* Estilos para la tabla */
+.table {
+    max-width: 100%; /* Ancho máximo de la tabla */
+}
+.table th, .table td {
+    white-space: nowrap; /* No permitir saltos de línea en celdas */
+    text-overflow: ellipsis; /* Agregar puntos suspensivos si el contenido es demasiado largo */
+    overflow: hidden; /* Ocultar el contenido que desborda la celda */
+    max-width: 150px; /* Ancho máximo de celdas */
+}
+.table th:last-child, .table td:last-child {
+    width: 150px; /* Ancho fijo para la última columna */
+    white-space: normal; /* Permitir que el contenido se ajuste verticalmente */
+}
+.table th:nth-child(-n+17), .table td:nth-child(-n+17) {
+    position: sticky; /* Hacer que las primeras 17 columnas se mantengan pegadas en la parte superior */
+    top: 0;
+    background-color: white; /* Fondo blanco para las celdas pegadas */
+    z-index: 2;
+}
+
+/* Estilos para las acciones en la tabla */
+.acciones-th {
+    position: sticky; /* Hacer que la columna de acciones se mantenga pegada en la parte superior */
+    top: 0;
+    background-color: white; /* Fondo blanco para la celda pegada */
+    z-index: 2;
+}
+.acciones-td {
+    position: sticky; /* Hacer que las celdas de acciones se mantengan pegadas en la parte superior */
+    top: 0;
+    background-color: white; /* Fondo blanco para las celdas pegadas */
+    z-index: 2;
+}
