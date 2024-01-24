@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Correos</title>
     <!-- icono de la pagina -->
-    <link rel="shortcut icon" href="http://192.168.10.140/app/icono.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/app/ico/icono.jpeg" type="image/x-icon">
     <style>
         /* Estilos para el banner */
         .bannerCorreos {
@@ -12,6 +12,7 @@
             color: #fff; /* Color del texto en el banner */
             text-align: center; /* Alineación del texto en el centro */
             padding: 20px; /* Espaciado interno del banner */
+            margin-top:40px; /* Espaciado interno del banner */
         }
 
         /* Estilos para la tabla */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título</title>
+    <title>footer</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -40,8 +40,8 @@
         .contenedorf {
             background-color: #007bff; /* Color de fondo del contenedor */
             color: #fff; /* Color del texto del contenedor */
-            padding: 20px; /* Espaciado interior del contenedor */
-            position: fixed; /* Fija el contenedor en la parte inferior */
+            padding: 10px; /* Espaciado interior del contenedor */
+            /* position: fixed; Fija el contenedor en la parte inferior */
             bottom: 0; /* Lo coloca en la parte inferior de la ventana */
             left: 0; /* Lo coloca al borde izquierdo */
             right: 0; /* Lo coloca al borde derecho */
@@ -76,10 +76,10 @@
     <script>
         $(document).ready(function () {
             $("#tabla_id").DataTable({
-                "pageLength": 5,
+                "pageLength": 4,
                 lengthMenu: [
-                    [5, 25, 50, 75, 100],
-                    [5, 25, 50, 75, 100]
+                    [4, 5, 25, 50, 75, 100],
+                    [4, 5, 25, 50, 75, 100]
                 ],
                 "language": {
                     "url": "https://cdn.datatables.net/plug-ins/1.13.1/i18n/es-ES.json"

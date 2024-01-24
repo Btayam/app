@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Terceros</title>
     <!-- icono de la pagina -->
-    <link rel="shortcut icon" href="icono.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/app/ico/icono.jpeg" type="image/x-icon">
     <style>
         /* Estilos para el bannerTerceros */
         .bannerTerceros {
@@ -12,6 +12,7 @@
             color: #fff;
             text-align: center;
             padding: 20px;
+            margin-top:40px; /* Espaciado interno del banner */
         }
 
         /* Estilos para la tabla */

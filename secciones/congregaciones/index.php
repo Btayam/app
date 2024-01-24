@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puestos</title>
+    <title>Congregaciones</title>
     <!-- icono de la pagina -->
     <link rel="shortcut icon" href="/app/ico/icono.jpeg" type="image/x-icon">
     <style>
@@ -59,7 +59,7 @@
 
     if(isset($_GET['txtID'])){
         $txtID = (isset($_GET['txtID'])) ? ($_GET['txtID']) : "";
-        $sentencia = $conexion->prepare("DELETE FROM tbl_puestos WHERE id=:id");
+        // $sentencia = $conexion->prepare("DELETE FROM tbl_puestos WHERE id=:id");
         $sentencia->bindParam(":id", $txtID);
         $sentencia->execute();
         $mensaje = "Registro eliminado";
@@ -77,7 +77,7 @@
     <section>
         <div class="bannerCorreos">
             <!-- Contenido del banner -->
-            <h1>Sistema de Puestos</h1>
+            <h1>Sistema de Congregaciones</h1>
             <p></p>
         </div>
     </section>
@@ -85,7 +85,7 @@
     <section>
         <div class="card">
             <div class="card-header">
-                <a name="" id="" class="btn btn-primary" href="crear.php" role="button">Agregar Puesto</a>
+                <a name="" id="" class="btn btn-primary" href="crear.php" role="button">Agregar Congregacion</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive-sm">

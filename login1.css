@@ -1,0 +1,108 @@
+/* Estilos CSS personalizados */
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+
+  background: linear-gradient(45deg, #ffffff, #00344a); /* Gradiente azul */
+  background-size: 400% 400%; /* Tamaño del fondo (importante para la animación) */
+  animation: gradientAnimation 15s infinite linear; /* Animación infinita durante 15 segundos */
+}
+
+/* Animación para el fondo */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* En login.css */
+.form-signin {
+  text-decoration: bisque;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* Asegura que el formulario esté sobre el fondo animado */
+  background: linear-gradient(90deg, #ffffff, #01628c); /* Gradiente de colores para la línea */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(255, 255, 255); /* Sombra suave */
+  animation: slide-up 0.5s ease;
+  overflow: hidden; /* Oculta el exceso de línea alrededor del formulario */
+}
+
+/* Línea animada sobre el cuadro de usuario y contraseña */
+.form-signin::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, #01628c); /* Gradiente de colores para la línea */
+  top: 0%;
+  animation: moveLine 2s infinite linear; /* Animación de la línea infinita */
+}
+
+
+/* Animación para la línea */
+@keyframes moveLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+  color: #26ddcb45; /* Ajuste del color (asegúrate de que esté en el formato correcto) */
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    color: #ffffff; /* Ajuste del color (asegúrate de que esté en el formato correcto) */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: #ffffff; /* Ajuste del color (asegúrate de que esté en el formato correcto) */
+  }
+}

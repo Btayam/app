@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Título Aquí</title>
+    <title>Usuarios</title>
+    <!-- icono de la pagina -->
+    <link rel="shortcut icon" href="/app/ico/icono.jpeg" type="image/x-icon">
     <style>
         /* Estilos para el banner */
         .bannerUsuarios{
@@ -11,6 +13,7 @@
             color: #fff; /* Color del texto en el banner */
             text-align: center; /* Alineación del texto en el centro */
             padding: 20px; /* Espaciado interno del banner */
+            margin-top:40px; /* Espaciado interno del banner */
         }
 
         /* Estilos para la tabla */

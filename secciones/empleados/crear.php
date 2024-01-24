@@ -5,7 +5,7 @@
 
     //print_r($_POST);
     //print_r($_FILES);//RECEPCIONA LOS ARCHIVO
-
+    $id = isset($_POST["id"]) ? intval(trim($_POST["id"])) : 0; // Convierte a entero
     $primernombre=(isset($_POST["primernombre"])?$_POST["primernombre"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
     $segundonombre=(isset($_POST["segundonombre"])?$_POST["segundonombre"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
     $primerapellido=(isset($_POST["primerapellido"])?$_POST["primerapellido"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
@@ -14,16 +14,17 @@
     $foto=(isset($_FILES["foto"]['name'])?$_FILES["foto"]['name']:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
     $cv=(isset($_FILES["cv"]['name'])?$_FILES["cv"]['name']:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
 
-    $idpuesto = isset($_POST["idpuesto"]) ? intval($_POST["idpuesto"]) : 0; 
-    // $idpuesto=(isset($_POST["idpuesto"])?$_POST["idpuesto"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
+
+    $idpuesto = isset($_POST["idpuesto"]) ? intval(trim($_POST["idpuesto"])) : 0; // Convierte a entero
     $fechadeingreso=(isset($_POST["fechadeingreso"])?$_POST["fechadeingreso"]:"");//Almacenamiento - validacion de que si existe se ponga de lo contrario ""
 
     //Preparar la inserccion de los datos
     $sentencia=$conexion->prepare("INSERT INTO 
     `tbl_empleados` (`id`, `primernombre`, `segundonombre`, `primerapellido`, `segundoapellido`, `foto`, `cv`, `idpuesto`, `fechadeingreso`) 
-    VALUES (NULL, :primernombre, :segundonombre, :primerapellido, :segundoapellido, :foto, :cv, :idpuesto, :fechadeingreso);");
+    VALUES (:id, :primernombre, :segundonombre, :primerapellido, :segundoapellido, :foto, :cv, :idpuesto, :fechadeingreso);");
 
      //Asignando los valores que vienen del metodo POST (LOS QUE VIENEN DEL FORMULARIO)
+     $sentencia->bindParam(":id", $id);
      $sentencia->bindParam(":primernombre",$primernombre);
      $sentencia->bindParam(":segundonombre",$segundonombre);
      $sentencia->bindParam(":primerapellido",$primerapellido);
@@ -69,6 +70,11 @@ $lista_tbl_puestos=$sentencia->fetchAll(PDO::FETCH_ASSOC);
     <!--/02 Formulario-->
     <div class="card-body">
         <form action="" method="post" enctype="multipart/form-data"> <!--enctype="" (adjuntar archivos)-->
+            <!-- bs5-form-input - 00 -->
+            <div class="mb-3">
+                <label for="id" class="form-label">Cédula</label>
+                <input type="text" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="ID">
+            </div>
             <!-- bs5-form-input - 01-->
             <div class="mb-3">
               <label for="primernombre" class="form-label">Primer Nombre</label>

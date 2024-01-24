@@ -3,7 +3,7 @@
 session_start();
 
 // URL base para evitar errores de URL
-$url_base = "http://192.168.10.140/app";
+$url_base = "http://localhost:8080/app";
 
 // Redirige al usuario a la página de inicio de sesión si no está logeado
 if (!isset($_SESSION['usuario'])) {
@@ -17,9 +17,9 @@ if (!isset($_SESSION['usuario'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Título</title>
+    <title>header</title>
     <!-- Icono de la página -->
-    <link rel="shortcut icon" href="http://192.168.10.140/app/icono.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="/app/icono.jpeg" type="image/x-icon">
     <!-- Bootstrap CSS v5.2.1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -41,7 +41,11 @@ if (!isset($_SESSION['usuario'])) {
             display: flex;
             justify-content: center;
         }
-
+        header{
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+        }
         /* Estilo para el botón activo (resaltado en azul) */
         .nav-item.active .nav-link {
             background-color: blue;
@@ -54,8 +58,8 @@ if (!isset($_SESSION['usuario'])) {
             color: #007bff;
         }
         .bannerHeader {
-            position: fixed; /* Banner fijo en la parte superior */
-            top: 0; /* Fijar en la parte superior de la ventana */
+            /* position: absolute; Banner fijo en la parte superior */
+            /* top: 0; Fijar en la parte superior de la ventana */
             background-color: #007bff; /* Color de fondo del banner */
             color: #ffffff; /* Color del texto del banner (azul) */
             padding: 0px; /* Espaciado interior del banner (ajusta según tus necesidades) */
@@ -65,21 +69,22 @@ if (!isset($_SESSION['usuario'])) {
 
         /* Estilo para la imagen del encabezado */
         .logo-img {
-            float: left; /* Hace que la imagen quede a la izquierda */
-            max-width: 100px; /* Ancho máximo de la imagen */
-            height: auto; /* Altura ajustada automáticamente para mantener las proporciones */
+            float: left;/* Hace que la imagen quede a la izquierda */
+            width: 100px; /* Ancho máximo de la imagen */
+            
         }
     </style>
 </head>
 <body>
-    <div class="bannerHeader"><p>-</p></div>
+    <div class="bannerHeader"></div>
     <header>
-        <div class="bannerHeader">
-            <img src="http://192.168.10.140/app/logo.png" alt="Logo de la empresa" class="logo-img">
-        </div>
         <!-- Barra de navegación -->
         <nav class="navbar navbar-expand navbar-light bg-light">
+            <img src="/app/ico/logo.png" alt="Logo de la empresa" class="logo-img">
             <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"></a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : ''; ?>" href="<?php echo $url_base ?>/index.php">Sistema</a>
                 </li>
@@ -97,6 +102,9 @@ if (!isset($_SESSION['usuario'])) {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo (in_array(basename($_SERVER['PHP_SELF']), array('terceros', 'index.php'))) ? 'active' : ''; ?>" href="<?php echo $url_base ?>/secciones/terceros/index.php">Terceros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php echo (in_array(basename($_SERVER['PHP_SELF']), array('terceros', 'index.php'))) ? 'active' : ''; ?>" href="<?php echo $url_base ?>/secciones/congregaciones/index.php">Congregaciones</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $url_base ?>/cerrar.php">Cerrar sesión</a>
