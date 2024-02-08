@@ -168,3 +168,16 @@
     <?php include("/xampp/htdocs/app/templates/footer.php"); ?> <!-- CONEXIÓN - VÍNCULO -->
 </body>
 </html>
+
+<!-- CREATE TABLE tbl_empleados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    primernombre VARCHAR(255),
+    segundonombre VARCHAR(255),
+    primerapellido VARCHAR(255),
+    segundoapellido VARCHAR(255),
+    foto VARCHAR(255),
+    cv VARCHAR(255),
+    idpuesto INT,
+    fechadeingreso DATE,
+    FOREIGN KEY (idpuesto) REFERENCES tbl_puestos(id)
+);

@@ -3,7 +3,10 @@
 session_start();
 
 // URL base para evitar errores de URL
-$url_base = "http://localhost:8080/app";
+// $url_base = "http://localhost/app";
+$url_base = "http://192.168.10.199/app";
+
+
 
 // Redirige al usuario a la página de inicio de sesión si no está logeado
 if (!isset($_SESSION['usuario'])) {
